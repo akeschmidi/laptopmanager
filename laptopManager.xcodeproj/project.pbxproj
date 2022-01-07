@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93EAECA272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */; };
+		C93EAECB272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */; };
+		C94E9C2C2785FE8F002E7882 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E9C2B2785FE8F002E7882 /* data.swift */; };
+		C94E9C2D2785FE8F002E7882 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E9C2B2785FE8F002E7882 /* data.swift */; };
 		C9FCB8DE2729C26C003E6151 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8DD2729C26C003E6151 /* Tests_iOS.swift */; };
 		C9FCB8E02729C26C003E6151 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8DF2729C26C003E6151 /* Tests_iOSLaunchTests.swift */; };
 		C9FCB8EA2729C26C003E6151 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8E92729C26C003E6151 /* Tests_macOS.swift */; };
@@ -37,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93EAEC9272B1E5B009ED9A3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C94E9C2B2785FE8F002E7882 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		C9FCB8C52729C26B003E6151 /* laptopManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laptopManagerApp.swift; sourceTree = "<group>"; };
 		C9FCB8C62729C26B003E6151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9FCB8C72729C26C003E6151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +105,9 @@
 			children = (
 				C9FCB8C52729C26B003E6151 /* laptopManagerApp.swift */,
 				C9FCB8C62729C26B003E6151 /* ContentView.swift */,
+				C94E9C2B2785FE8F002E7882 /* data.swift */,
 				C9FCB8C72729C26C003E6151 /* Assets.xcassets */,
+				C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 			dependencies = (
 			);
 			name = "laptopManager (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "laptopManager (iOS)";
 			productReference = C9FCB8CC2729C26C003E6151 /* laptopManager.app */;
 			productType = "com.apple.product-type.application";
@@ -222,7 +232,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					C9FCB8CB2729C26C003E6151 = {
 						CreatedOnToolsVersion = 13.1;
@@ -249,6 +259,8 @@
 				Base,
 			);
 			mainGroup = C9FCB8BF2729C26B003E6151;
+			packageReferences = (
+			);
 			productRefGroup = C9FCB8CD2729C26C003E6151 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +313,8 @@
 			files = (
 				C9FCB8EF2729C26C003E6151 /* ContentView.swift in Sources */,
 				C9FCB8ED2729C26C003E6151 /* laptopManagerApp.swift in Sources */,
+				C93EAECA272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */,
+				C94E9C2C2785FE8F002E7882 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +324,8 @@
 			files = (
 				C9FCB8F02729C26C003E6151 /* ContentView.swift in Sources */,
 				C9FCB8EE2729C26C003E6151 /* laptopManagerApp.swift in Sources */,
+				C93EAECB272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */,
+				C94E9C2D2785FE8F002E7882 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +414,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -451,6 +469,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -525,6 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -553,6 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -725,6 +747,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C93EAEC9272B1E5B009ED9A3 /* Model.xcdatamodel */,
+			);
+			currentVersion = C93EAEC9272B1E5B009ED9A3 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9FCB8C02729C26B003E6151 /* Project object */;
 }
