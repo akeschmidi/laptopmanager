@@ -20,23 +20,23 @@ struct reservationView: View {
     @State private var selectedTeacher = ""
     
     
-    @State  var date = Date()
+    @State  var selectedDate = Date()
     
     //Count how many laptops you need for this view
     var laptopIDList = ["1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"]
     
-    var teacherList = ["Stefan", "Diveres"]
+    var teacherList = ["André", "Anja", "Adriana", "Christian","Emanuela", "Clayton", "Denise", "Jolanda","Michaela","Martina","Nadina","Petra","Silvan","Sandro","Stefan"]
     
-    var fachList = ["Informatik", "Deutsch", "Diverses"]
+    var fachList = ["Informatik", "Deutsch", "English", "PU","Französisch", "Anderes"]
     
     
-    func addData(fistname:String, lastname:String, fach:String, laptopID:String, techaer:String){
+    func addData(fistname:String, lastname:String, fach:String, laptopID:String, techaer:String, date:Date){
         
         //Init Firebase/Firestor
         let db = Firestore.firestore()
         
         
-        db.collection("reservation").addDocument(data: ["Firstname": fistname, "Lastname": lastname, "fach": selectedFach, "LaptopID": selectedLaptopID, "teacher": selectedTeacher])
+        db.collection("reservation").addDocument(data: ["Firstname": fistname, "Lastname": lastname, "fach": selectedFach, "LaptopID": selectedLaptopID, "teacher": selectedTeacher,"Datum": selectedDate])
     
     }
     
@@ -66,16 +66,16 @@ struct reservationView: View {
                         Text($0)
                         }
                     }
-            DatePicker("Datum",selection: $date,displayedComponents: [.date])
+            DatePicker("Datum",selection: $selectedDate,displayedComponents: [.date])
                 .datePickerStyle(.compact)
-
+                
             
-            
+            // TODO: Überprüfung ob die felder nicht leer sind
             //Save Button
             Button(action: {
                 
                 //Add Data to Firebase
-                addData(fistname: fistname,lastname: lastname, fach: selectedFach, laptopID: selectedLaptopID, techaer: selectedTeacher)
+                addData(fistname: fistname,lastname: lastname, fach: selectedFach, laptopID: selectedLaptopID, techaer: selectedTeacher, date: selectedDate)
                 
                 //Clear InputFields
                 fistname = ""
@@ -84,18 +84,20 @@ struct reservationView: View {
                 selectedLaptopID = ""
                 selectedTeacher = ""
                 
-            })
-                    
-             {
-                 Text("Speichern").frame(maxWidth: 400)
-                    .padding()
-                    .foregroundColor(.white)}
+                }
+            )
+            
+        {
+         Text("Speichern").frame(maxWidth: 400)
+            .padding(20)
+            .foregroundColor(.white)
+                 
+            }
             .background(.teal)
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-        .navigationTitle("Laptop's")
-            }
         }
     }
+}
 
 
 struct ContentView: View {
@@ -105,12 +107,11 @@ struct ContentView: View {
                 NavigationLink(
                     destination: reservationView(),
                     label: {
-                        Label("💻", systemImage: "")
+                        Label("Erfassung 💻", systemImage: " ")
                     })
 
             }
-            .font(.largeTitle)
-            .navigationTitle("💻 Reservation")
+            .navigationTitle("💻")
         }
 
     }
