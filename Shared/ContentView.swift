@@ -18,13 +18,16 @@ struct reservationView: View {
     @State  var date = Date()
     @State private var selectedLaptopID = ""
     
+    
     //Count how many laptops you need for this view
-    var laptopIDList = ["1", "2", "3", "4"]
+    var laptopIDList = ["1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"]
     
     
     func addData(name:String, fach:String, laptopID:String){
         
-       let db = Firestore.firestore()
+        //Init Firebase/Firestor
+        let db = Firestore.firestore()
+        
         
         db.collection("reservation").addDocument(data: ["name": name, "fach": fach, "LaptopID": selectedLaptopID])
     
@@ -39,7 +42,7 @@ struct reservationView: View {
     var body: some View {
         List {
             TextField("Name", text: $name)
-            TextField("Fach", text: $fach)   
+            TextField("Fach", text: $fach)
             Picker("Laptopnummer", selection: $selectedLaptopID) {
                     ForEach(laptopIDList, id: \.self) {
                         Text($0)
