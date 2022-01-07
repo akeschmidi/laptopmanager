@@ -8,12 +8,12 @@
 import Foundation
 
 
-func apiCall() {
-    guard let url = URL(string: "") else {
-        return
-    }
+//func apiCall() {
+    // guard let url = URL(string: "") else {
+        //    return
+        //}
     
-    var request = URLRequest(url: url)
+    //var request = URLRequest(url: url)
     
     //method body headers
     
@@ -21,4 +21,4 @@ func apiCall() {
     //
     
     
-}
+//}
