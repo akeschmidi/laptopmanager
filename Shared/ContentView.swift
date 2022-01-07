@@ -35,7 +35,7 @@ struct reservationView: View {
         //Init Firebase/Firestor
         let db = Firestore.firestore()
         
-        
+        // TODO: sinnvolle reservationID hinzufügen
         db.collection("reservation").addDocument(data: ["Firstname": fistname, "Lastname": lastname, "fach": selectedFach, "LaptopID": selectedLaptopID, "teacher": selectedTeacher,"Datum": selectedDate])
     
     }
