@@ -11,6 +11,12 @@
 		C93EAECB272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */; };
 		C94E9C2C2785FE8F002E7882 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E9C2B2785FE8F002E7882 /* data.swift */; };
 		C94E9C2D2785FE8F002E7882 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E9C2B2785FE8F002E7882 /* data.swift */; };
+		C98AE6742789BB8900491394 /* adminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE6732789BB8900491394 /* adminView.swift */; };
+		C98AE6752789BB8900491394 /* adminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE6732789BB8900491394 /* adminView.swift */; };
+		C98AE6772789BCFA00491394 /* reservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE6762789BCFA00491394 /* reservationView.swift */; };
+		C98AE6782789BCFA00491394 /* reservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE6762789BCFA00491394 /* reservationView.swift */; };
+		C98AE67C2789BF1E00491394 /* reporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE67B2789BF1E00491394 /* reporterView.swift */; };
+		C98AE67D2789BF1E00491394 /* reporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE67B2789BF1E00491394 /* reporterView.swift */; };
 		C9B0AA4A27889A9500F51C19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4927889A9500F51C19 /* FirebaseAnalytics */; };
 		C9B0AA4C27889A9500F51C19 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4B27889A9500F51C19 /* FirebaseAnalyticsSwift-Beta */; };
 		C9B0AA4E27889A9500F51C19 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4D27889A9500F51C19 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -72,6 +78,9 @@
 /* Begin PBXFileReference section */
 		C93EAEC9272B1E5B009ED9A3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C94E9C2B2785FE8F002E7882 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		C98AE6732789BB8900491394 /* adminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminView.swift; sourceTree = "<group>"; };
+		C98AE6762789BCFA00491394 /* reservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reservationView.swift; sourceTree = "<group>"; };
+		C98AE67B2789BF1E00491394 /* reporterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reporterView.swift; sourceTree = "<group>"; };
 		C9E01D9127888CFC004D8AD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9FCB8C52729C26B003E6151 /* laptopManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laptopManagerApp.swift; sourceTree = "<group>"; };
 		C9FCB8C62729C26B003E6151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +155,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C98AE6792789BD2200491394 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCB8C62729C26B003E6151 /* ContentView.swift */,
+				C98AE67B2789BF1E00491394 /* reporterView.swift */,
+				C98AE6732789BB8900491394 /* adminView.swift */,
+				C98AE6762789BCFA00491394 /* reservationView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		C98AE67A2789BD3B00491394 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C94E9C2B2785FE8F002E7882 /* data.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		C9FCB8BF2729C26B003E6151 = {
 			isa = PBXGroup;
 			children = (
@@ -160,10 +188,10 @@
 		C9FCB8C42729C26B003E6151 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C9E01D9127888CFC004D8AD6 /* GoogleService-Info.plist */,
 				C9FCB8C52729C26B003E6151 /* laptopManagerApp.swift */,
-				C9FCB8C62729C26B003E6151 /* ContentView.swift */,
-				C94E9C2B2785FE8F002E7882 /* data.swift */,
+				C98AE6792789BD2200491394 /* views */,
+				C98AE67A2789BD3B00491394 /* data */,
+				C9E01D9127888CFC004D8AD6 /* GoogleService-Info.plist */,
 				C9FCB8C72729C26C003E6151 /* Assets.xcassets */,
 				C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */,
 			);
@@ -401,6 +429,9 @@
 			files = (
 				C9FCB8EF2729C26C003E6151 /* ContentView.swift in Sources */,
 				C9FCB8ED2729C26C003E6151 /* laptopManagerApp.swift in Sources */,
+				C98AE67C2789BF1E00491394 /* reporterView.swift in Sources */,
+				C98AE6742789BB8900491394 /* adminView.swift in Sources */,
+				C98AE6772789BCFA00491394 /* reservationView.swift in Sources */,
 				C93EAECA272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */,
 				C94E9C2C2785FE8F002E7882 /* data.swift in Sources */,
 			);
@@ -412,6 +443,9 @@
 			files = (
 				C9FCB8F02729C26C003E6151 /* ContentView.swift in Sources */,
 				C9FCB8EE2729C26C003E6151 /* laptopManagerApp.swift in Sources */,
+				C98AE67D2789BF1E00491394 /* reporterView.swift in Sources */,
+				C98AE6752789BB8900491394 /* adminView.swift in Sources */,
+				C98AE6782789BCFA00491394 /* reservationView.swift in Sources */,
 				C93EAECB272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */,
 				C94E9C2D2785FE8F002E7882 /* data.swift in Sources */,
 			);
