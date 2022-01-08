@@ -81,6 +81,7 @@
 		C98AE6732789BB8900491394 /* adminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminView.swift; sourceTree = "<group>"; };
 		C98AE6762789BCFA00491394 /* reservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reservationView.swift; sourceTree = "<group>"; };
 		C98AE67B2789BF1E00491394 /* reporterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reporterView.swift; sourceTree = "<group>"; };
+		C98AE67E2789DD9F00491394 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C9E01D9127888CFC004D8AD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9FCB8C52729C26B003E6151 /* laptopManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laptopManagerApp.swift; sourceTree = "<group>"; };
 		C9FCB8C62729C26B003E6151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,6 +178,7 @@
 		C9FCB8BF2729C26B003E6151 = {
 			isa = PBXGroup;
 			children = (
+				C98AE67E2789DD9F00491394 /* README.md */,
 				C9FCB8C42729C26B003E6151 /* Shared */,
 				C9FCB8D32729C26C003E6151 /* macOS */,
 				C9FCB8DC2729C26C003E6151 /* Tests iOS */,
