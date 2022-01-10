@@ -18,13 +18,22 @@ struct User: Identifiable {
     var Fach: String
 }
 
+
+struct Report: Identifiable {
+    var id: String = UUID().uuidString
+    var report: String
+    var reporter: String
+    var LaptopID: String
+}
+
 class userViewModel: ObservableObject {
     
     @Published var users = [User]()
+    @Published var report = [Report]()
     
     private var db = Firestore.firestore()
     
-    func fetchData() {
+    func fetchDataReservations() {
         db.collection("reservation").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
@@ -36,10 +45,29 @@ class userViewModel: ObservableObject {
                 let firstname = data["Firstname"] as? String ?? ""
                 let lastname = data["Lastname"] as? String ?? ""
                 let laptopID = data["LaptopID"] as? String ?? ""
-                let fach = data["Fach"] as? String ?? ""
+                let fach = data["fach"] as? String ?? ""
 
                 
                 return User(Lastname:lastname, Firstname:firstname, LaptopID:laptopID, Fach:fach)
+            }
+        }
+    }
+    
+    func fetchDataReports() {
+        db.collection("report").addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            
+            self.report = documents.map { (queryDocumentSnapshot) -> Report in
+                let data = queryDocumentSnapshot.data()
+                let laptopID = data["LaptopID"] as? String ?? ""
+                let report = data["Report"] as? String ?? ""
+                let reporter = data["Reporter"] as? String ?? ""
+
+                
+                return Report(report:report, reporter:reporter,LaptopID:laptopID)
             }
         }
     }
@@ -50,16 +78,32 @@ struct adminView: View {
     @ObservedObject private var viewModel = userViewModel()
     
     var body: some View {
-        NavigationView {
+        
+        Group {
             List(viewModel.users) { user in
-                VStack(alignment: .leading) {
-                    Text(user.Firstname).font(.title)
-                    Text(user.Lastname).font(.subheadline)
+                HStack {
+                    Text("Vorname: " + user.Firstname)
+                    Text("Nachname: " + user.Lastname)
+                    Text("Laptopnummer: " + user.LaptopID)
+                    Text("Fach: " + user.Fach)
                 }
-            }.navigationBarTitle("Users")
-            .onAppear() {
-                self.viewModel.fetchData()
             }
+            .listStyle(.grouped)
+            .onAppear() {
+                self.viewModel.fetchDataReservations()
+            }
+            
+            List(viewModel.report) { report in
+                HStack {
+                    Text("Laptopnummer: " + report.LaptopID)
+                    Text("Erfasser: " + report.report)
+                    Text("Bericht: " + report.reporter)
+                }
+            }
+            .onAppear() {
+                self.viewModel.fetchDataReports()
+            }
+            .listStyle(.grouped)
         }
     }
 }

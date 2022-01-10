@@ -54,8 +54,8 @@ struct reservationView: View {
     //View beginns
     var body: some View {
         List {
-            TextField("Vorname", text: $firstname)
-            TextField("Nachname", text: $lastname)
+            TextField("Schueler Vorname", text: $firstname)
+            TextField("Schueler Nachname", text: $lastname)
             
             Picker("Fach", selection: $selectedFach) {
                     ForEach(fachList, id: \.self) {
