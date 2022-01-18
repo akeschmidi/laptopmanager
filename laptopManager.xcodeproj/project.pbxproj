@@ -19,6 +19,7 @@
 		C98AE67D2789BF1E00491394 /* reporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE67B2789BF1E00491394 /* reporterView.swift */; };
 		C99B32282795985F00A60BC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C99B32272795985F00A60BC8 /* GoogleService-Info.plist */; };
 		C99B32292795985F00A60BC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C99B32272795985F00A60BC8 /* GoogleService-Info.plist */; };
+		C99B322F279746E400A60BC8 /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */; };
 		C9B0AA4A27889A9500F51C19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4927889A9500F51C19 /* FirebaseAnalytics */; };
 		C9B0AA4C27889A9500F51C19 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4B27889A9500F51C19 /* FirebaseAnalyticsSwift-Beta */; };
 		C9B0AA4E27889A9500F51C19 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA4D27889A9500F51C19 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -109,6 +110,7 @@
 				C9B0AA5027889A9500F51C19 /* FirebaseAppCheck in Frameworks */,
 				C9B0AA7E27889A9500F51C19 /* FirebaseStorageSwift-Beta in Frameworks */,
 				C9B0AA5427889A9500F51C19 /* FirebaseAuth in Frameworks */,
+				C99B322F279746E400A60BC8 /* SwiftfulLoadingIndicators in Frameworks */,
 				C9B0AA4C27889A9500F51C19 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				C9B0AA7227889A9500F51C19 /* FirebaseMLModelDownloader in Frameworks */,
 				C9B0AA6027889A9500F51C19 /* FirebaseFirestore in Frameworks */,
@@ -281,6 +283,7 @@
 				C9B0AA7927889A9500F51C19 /* FirebaseStorage */,
 				C9B0AA7B27889A9500F51C19 /* FirebaseStorageCombine-Community */,
 				C9B0AA7D27889A9500F51C19 /* FirebaseStorageSwift-Beta */,
+				C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */,
 			);
 			productName = "laptopManager (iOS)";
 			productReference = C9FCB8CC2729C26C003E6151 /* laptopManager.app */;
@@ -376,6 +379,7 @@
 			mainGroup = C9FCB8BF2729C26B003E6151;
 			packageReferences = (
 				C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 			);
 			productRefGroup = C9FCB8CD2729C26C003E6151 /* Products */;
 			projectDirPath = "";
@@ -875,6 +879,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -886,6 +898,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
+		};
 		C9B0AA4927889A9500F51C19 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

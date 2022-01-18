@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Firebase
+import SwiftfulLoadingIndicators
 
 @main
 struct laptopManagerApp: App {
     
     //Add Firebase
     init() {
-      FirebaseApp.configure()
+        FirebaseApp.configure()
     }
     
     //Main View
