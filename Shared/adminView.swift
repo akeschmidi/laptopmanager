@@ -26,6 +26,14 @@ struct Report: Identifiable {
     var LaptopID: String
 }
 
+func signIn() {
+  if Auth.auth().currentUser == nil {
+    Auth.auth().signInAnonymously()
+      print("Error SingIn")
+  }
+}
+
+
 class userViewModel: ObservableObject {
     
     @Published var users = [User]()
@@ -34,6 +42,7 @@ class userViewModel: ObservableObject {
     private var db = Firestore.firestore()
     
     func fetchDataReservations() {
+        signIn()
         db.collection("reservation").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
@@ -96,8 +105,8 @@ struct adminView: View {
             List(viewModel.report) { report in
                 HStack {
                     Text("Laptopnummer: " + report.LaptopID)
-                    Text("Erfasser: " + report.report)
-                    Text("Bericht: " + report.reporter)
+                    Text("Bericht: " + report.report)
+                    Text("Melder: " + report.reporter)
                 }
             }
             .onAppear() {

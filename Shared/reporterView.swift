@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import Firebase
+import FirebaseAuth
 
 struct reporterView: View {
     
@@ -21,8 +22,16 @@ struct reporterView: View {
     
     var teacherList = ["André", "Anja", "Adriana", "Christian","Emanuela", "Clayton", "Denise", "Jolanda","Michaela","Martina","Kilian","Nadina","Petra","Silvan","Sandro","Stefan"]
     
+    func signIn() {
+      if Auth.auth().currentUser == nil {
+        Auth.auth().signInAnonymously()
+          print("Error SingIn")
+      }
+    }
     
     func addData(reporter:String, report:String, reportedLaptopID:String, date:Date){
+        
+        signIn()
         
         //Init Firebase/Firestor
         let db = Firestore.firestore()

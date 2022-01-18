@@ -33,6 +33,8 @@ struct reservationView: View {
     
     func addData(fistname:String, lastname:String, fach:String, laptopID:String, techaer:String, date:Date){
         
+        signIn()
+        
         //Init Firebase/Firestor
         let db = Firestore.firestore()
         
