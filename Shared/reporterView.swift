@@ -10,12 +10,19 @@ import FirebaseFirestore
 import Firebase
 import FirebaseAuth
 import SwiftfulLoadingIndicators
+import ValidatedPropertyKit
 
 struct reporterView: View {
     
+    //Validated
+    @Validated(!.isEmpty)
+    var report = String ()
+    
+    
+    
     //Values
     @State public var reporter = ""
-    @State var report: String = ""
+    
     @State var reportedDate = Date()
     @State public var reportedLaptopID = ""
     @State var buttonTap = false
@@ -49,7 +56,6 @@ struct reporterView: View {
     
     
     var body: some View {
-
         List {
             Picker("Laptopnummer", selection: $reportedLaptopID) {
                 ForEach(laptopIDList, id: \.self) {
@@ -81,9 +87,6 @@ struct reporterView: View {
                     })
                     {
                          Text("Speichern").frame(maxWidth: 400)
-                            .padding(20)
-                            .foregroundColor(.white)
-                            .navigationBarHidden(true)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 10)
                     }
@@ -91,6 +94,7 @@ struct reporterView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .disabled(report.isEmpty||reporter.isEmpty||reportedLaptopID.isEmpty)
             }
+        .navigationBarTitle("Defekt erfassen:")
         }
     }
 

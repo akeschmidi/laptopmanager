@@ -57,61 +57,62 @@ struct reservationView: View {
     //View beginns
     var body: some View {
         List {
-            TextField("Schüler Vorname", text: $firstname)
-            TextField("Schüler Nachname", text: $lastname)
-            
-            Picker("Fach", selection: $selectedFach) {
-                    ForEach(fachList, id: \.self) {
-                        Text($0)
-                        }
-                    }
-            Picker("Lehrperson", selection: $selectedTeacher ) {
-                    ForEach(teacherList, id: \.self) {
-                        Text($0)
-                        }
-                    }
-            Picker("Laptopnummer", selection: $selectedLaptopID) {
-                    ForEach(laptopIDList, id: \.self) {
-                        Text($0)
-                        }
-                    }
-            DatePicker("Datum",selection: $selectedDate,displayedComponents: [.date])
-                .datePickerStyle(.compact)
+                TextField("Schüler Vorname", text: $firstname)
+                TextField("Schüler Nachname", text: $lastname)
                 
-            Button(action: {
-                            
-                //Add Data to Firebase
-                addData(fistname:firstname,
-                        lastname: lastname,
-                        fach: selectedFach,
-                        laptopID: selectedLaptopID,
-                        techaer: selectedTeacher,
-                        date: selectedDate
-                )
+                Picker("Laptopnummer", selection: $selectedLaptopID) {
+                        ForEach(laptopIDList, id: \.self) {
+                            Text($0)
+                            }
+                        }
                 
-                //Clear InputFields
-                firstname = ""
-                lastname = ""
-                selectedFach = ""
-                selectedLaptopID = ""
-                selectedTeacher = ""
-                
-                })
-                {
-                     Text("Speichern").frame(maxWidth: 400)
-                        .padding(20)
-                        .foregroundColor(.white)
-                        .navigationBarHidden(true)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.vertical, 10)
-                }
-                        .background(.teal)
-                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .disabled(firstname.isEmpty||selectedFach.isEmpty||selectedTeacher.isEmpty||selectedLaptopID.isEmpty)
-        }
+                Picker("Fach", selection: $selectedFach) {
+                        ForEach(fachList, id: \.self) {
+                            Text($0)
+                            }
+                        }
+                Picker("Lehrperson", selection: $selectedTeacher ) {
+                        ForEach(teacherList, id: \.self) {
+                            Text($0)
+                            }
+                        }
 
+                DatePicker("Datum",selection: $selectedDate,displayedComponents: [.date])
+                    .datePickerStyle(.compact)
+                
+                Button("Fach und Lehrer Löschen") {
+                    selectedFach = ""
+                    selectedTeacher = ""
+                }
+                .buttonStyle(.bordered)
+
+                Button(action: {
+                                
+                    //Add Data to Firebase
+                    addData(fistname:firstname,
+                            lastname: lastname,
+                            fach: selectedFach,
+                            laptopID: selectedLaptopID,
+                            techaer: selectedTeacher,
+                            date: selectedDate
+                    )
+                    
+                    //Clear InputFields
+                    firstname = ""
+                    lastname = ""
+                    selectedLaptopID = ""})
+                    {
+                         Text("Speichern").frame(maxWidth: 400)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.vertical, 10)
+                    }
+                            .background(.teal)
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .disabled(firstname.isEmpty||selectedFach.isEmpty||selectedTeacher.isEmpty||selectedLaptopID.isEmpty)
+            }
+        .navigationTitle("Erfassen")
+        }
     }
-}
 struct reservationView_Previews: PreviewProvider {
     static var previews: some View {
         reservationView()

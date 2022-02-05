@@ -18,23 +18,21 @@ struct ContentView: View {
                     label: {
                         Label("Erfassung", systemImage: "person.fill.checkmark")
                     })
+                    
                 NavigationLink(
                     destination: adminView(),
                     label: {
                         Label("Admin", systemImage: "person.2.fill")
                     })
+                
                 NavigationLink(
                     destination: reporterView(),
                     label: {
                         Label("Defekt erfassen", systemImage: "pencil")
                     })
-                
 
             }
-
-            .navigationTitle("LMS 💻")
-            
-            
+            .navigationTitle("Home 💻")
         }
 
     }

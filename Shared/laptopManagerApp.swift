@@ -15,6 +15,7 @@ struct laptopManagerApp: App {
     //Add Firebase
     init() {
         FirebaseApp.configure()
+        UITableViewCell.appearance().backgroundColor = .gray
     }
     
     //Main View

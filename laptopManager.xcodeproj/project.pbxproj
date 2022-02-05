@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9264F8D27A81350005E31F4 /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9264F8C27A81350005E31F4 /* ValidatedPropertyKit */; };
+		C9264F8F27A81522005E31F4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9264F8E27A81522005E31F4 /* background.jpg */; };
+		C9264F9027A81522005E31F4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9264F8E27A81522005E31F4 /* background.jpg */; };
 		C93EAECA272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */; };
 		C93EAECB272B1E5B009ED9A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */; };
 		C94E9C2C2785FE8F002E7882 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E9C2B2785FE8F002E7882 /* data.swift */; };
@@ -77,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9264F8E27A81522005E31F4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../Downloads/background.jpg; sourceTree = "<group>"; };
 		C93EAEC9272B1E5B009ED9A3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C94E9C2B2785FE8F002E7882 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		C98AE6732789BB8900491394 /* adminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				C9B0AA6E27889A9500F51C19 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				C9B0AA5627889A9500F51C19 /* FirebaseAuthCombine-Community in Frameworks */,
 				C9B0AA4A27889A9500F51C19 /* FirebaseAnalytics in Frameworks */,
+				C9264F8D27A81350005E31F4 /* ValidatedPropertyKit in Frameworks */,
 				C9B0AA7427889A9500F51C19 /* FirebaseMessaging in Frameworks */,
 				C9B0AA7027889A9500F51C19 /* FirebaseInstallations in Frameworks */,
 			);
@@ -197,6 +202,7 @@
 				C98AE67A2789BD3B00491394 /* data */,
 				C99B32272795985F00A60BC8 /* GoogleService-Info.plist */,
 				C9FCB8C72729C26C003E6151 /* Assets.xcassets */,
+				C9264F8E27A81522005E31F4 /* background.jpg */,
 				C93EAEC8272B1E5B009ED9A3 /* Model.xcdatamodeld */,
 			);
 			path = Shared;
@@ -284,6 +290,7 @@
 				C9B0AA7B27889A9500F51C19 /* FirebaseStorageCombine-Community */,
 				C9B0AA7D27889A9500F51C19 /* FirebaseStorageSwift-Beta */,
 				C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */,
+				C9264F8C27A81350005E31F4 /* ValidatedPropertyKit */,
 			);
 			productName = "laptopManager (iOS)";
 			productReference = C9FCB8CC2729C26C003E6151 /* laptopManager.app */;
@@ -380,6 +387,7 @@
 			packageReferences = (
 				C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
+				C9264F8B27A8134F005E31F4 /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */,
 			);
 			productRefGroup = C9FCB8CD2729C26C003E6151 /* Products */;
 			projectDirPath = "";
@@ -398,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9264F8F27A81522005E31F4 /* background.jpg in Resources */,
 				C9FCB8F12729C26C003E6151 /* Assets.xcassets in Resources */,
 				C99B32282795985F00A60BC8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -407,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9264F9027A81522005E31F4 /* background.jpg in Resources */,
 				C9FCB8F22729C26C003E6151 /* Assets.xcassets in Resources */,
 				C99B32292795985F00A60BC8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -612,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 34DTFQCK2V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -627,7 +637,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.laptopManager;
 				PRODUCT_NAME = laptopManager;
 				SDKROOT = iphoneos;
@@ -643,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 34DTFQCK2V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -658,7 +668,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.laptopManager;
 				PRODUCT_NAME = laptopManager;
 				SDKROOT = iphoneos;
@@ -879,6 +889,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C9264F8B27A8134F005E31F4 /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/ValidatedPropertyKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
 		C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators.git";
@@ -898,6 +916,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C9264F8C27A81350005E31F4 /* ValidatedPropertyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9264F8B27A8134F005E31F4 /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */;
+			productName = ValidatedPropertyKit;
+		};
 		C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;

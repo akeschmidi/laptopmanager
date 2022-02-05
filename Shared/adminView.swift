@@ -88,7 +88,11 @@ struct adminView: View {
     
     var body: some View {
         
+        
+
         Group {
+            Text("")
+                .navigationBarTitle("Erfassungen")
             List(viewModel.users) { user in
                 HStack {
                     Text("Vorname: " + user.Firstname)
@@ -101,6 +105,8 @@ struct adminView: View {
             .onAppear() {
                 self.viewModel.fetchDataReservations()
             }
+        }
+
             
             List(viewModel.report) { report in
                 HStack {
@@ -113,9 +119,9 @@ struct adminView: View {
                 self.viewModel.fetchDataReports()
             }
             .listStyle(.grouped)
+            
         }
     }
-}
 
 
 struct adminView_Previews: PreviewProvider {
