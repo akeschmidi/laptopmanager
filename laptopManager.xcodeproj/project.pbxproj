@@ -50,6 +50,7 @@
 		C9B0AA7A27889A9500F51C19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA7927889A9500F51C19 /* FirebaseStorage */; };
 		C9B0AA7C27889A9500F51C19 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA7B27889A9500F51C19 /* FirebaseStorageCombine-Community */; };
 		C9B0AA7E27889A9500F51C19 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = C9B0AA7D27889A9500F51C19 /* FirebaseStorageSwift-Beta */; };
+		C9EDBCC227BD6F8E001D2149 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = C9EDBCC127BD6F8E001D2149 /* SimpleToast */; };
 		C9FCB8DE2729C26C003E6151 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8DD2729C26C003E6151 /* Tests_iOS.swift */; };
 		C9FCB8E02729C26C003E6151 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8DF2729C26C003E6151 /* Tests_iOSLaunchTests.swift */; };
 		C9FCB8EA2729C26C003E6151 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCB8E92729C26C003E6151 /* Tests_macOS.swift */; };
@@ -111,6 +112,7 @@
 				C9B0AA5C27889A9500F51C19 /* FirebaseDatabaseSwift-Beta in Frameworks */,
 				C9B0AA5E27889A9500F51C19 /* FirebaseDynamicLinks in Frameworks */,
 				C9B0AA7A27889A9500F51C19 /* FirebaseStorage in Frameworks */,
+				C9EDBCC227BD6F8E001D2149 /* SimpleToast in Frameworks */,
 				C9B0AA5027889A9500F51C19 /* FirebaseAppCheck in Frameworks */,
 				C9B0AA7E27889A9500F51C19 /* FirebaseStorageSwift-Beta in Frameworks */,
 				C9B0AA5427889A9500F51C19 /* FirebaseAuth in Frameworks */,
@@ -291,6 +293,7 @@
 				C9B0AA7D27889A9500F51C19 /* FirebaseStorageSwift-Beta */,
 				C99B322E279746E400A60BC8 /* SwiftfulLoadingIndicators */,
 				C9264F8C27A81350005E31F4 /* ValidatedPropertyKit */,
+				C9EDBCC127BD6F8E001D2149 /* SimpleToast */,
 			);
 			productName = "laptopManager (iOS)";
 			productReference = C9FCB8CC2729C26C003E6151 /* laptopManager.app */;
@@ -388,6 +391,7 @@
 				C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C99B322D279746E400A60BC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 				C9264F8B27A8134F005E31F4 /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */,
+				C9EDBCC027BD6F8E001D2149 /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = C9FCB8CD2729C26C003E6151 /* Products */;
 			projectDirPath = "";
@@ -622,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 34DTFQCK2V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -637,7 +641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.laptopManager;
 				PRODUCT_NAME = laptopManager;
 				SDKROOT = iphoneos;
@@ -653,7 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 34DTFQCK2V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -668,7 +672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.laptopManager;
 				PRODUCT_NAME = laptopManager;
 				SDKROOT = iphoneos;
@@ -913,6 +917,14 @@
 				kind = branch;
 			};
 		};
+		C9EDBCC027BD6F8E001D2149 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1060,6 +1072,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C9B0AA4827889A9500F51C19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
+		};
+		C9EDBCC127BD6F8E001D2149 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9EDBCC027BD6F8E001D2149 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 
