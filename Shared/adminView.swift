@@ -16,6 +16,8 @@ struct User: Identifiable {
     var Firstname: String
     var LaptopID: String
     var Fach: String
+    var Datum: Date
+    
 }
 
 
@@ -55,9 +57,10 @@ class userViewModel: ObservableObject {
                 let lastname = data["Lastname"] as? String ?? ""
                 let laptopID = data["LaptopID"] as? String ?? ""
                 let fach = data["fach"] as? String ?? ""
-
+                let datum = (data["Datum"] as? Timestamp)?.dateValue() ?? Date()
                 
-                return User(Lastname:lastname, Firstname:firstname, LaptopID:laptopID, Fach:fach)
+                
+                return User(Lastname:lastname, Firstname:firstname, LaptopID:laptopID, Fach:fach, Datum: datum)
             }
         }
     }
@@ -73,7 +76,7 @@ class userViewModel: ObservableObject {
                 let data = queryDocumentSnapshot.data()
                 let laptopID = data["LaptopID"] as? String ?? ""
                 let report = data["Report"] as? String ?? ""
-                let reporter = data["Reporter"] as? String ?? ""
+                let reporter = data["reporter"] as? String ?? ""
 
                 
                 return Report(report:report, reporter:reporter,LaptopID:laptopID)
@@ -87,19 +90,23 @@ struct adminView: View {
     @ObservedObject private var viewModel = userViewModel()
     
     var body: some View {
-        
-        
 
         Group {
             Text("")
                 .navigationBarTitle("Erfassungen")
             List(viewModel.users) { user in
                 HStack {
-                    Text("Vorname: " + user.Firstname)
-                    Text("Nachname: " + user.Lastname)
-                    Text("Laptopnummer: " + user.LaptopID)
-                    Text("Fach: " + user.Fach)
+                    VStack (alignment: .leading) {
+                        Text("Vorname: \(user.Firstname)")
+                        Text("Fach: \(user.Fach)")
+                        Text("Laptopnummer: \(user.LaptopID)")
+                        Text("Datum: \(user.Datum)")
+                            
+                    }
                 }
+            }
+            .toolbar {
+                EditButton()
             }
             .listStyle(.grouped)
             .onAppear() {
@@ -110,9 +117,11 @@ struct adminView: View {
             
             List(viewModel.report) { report in
                 HStack {
-                    Text("Laptopnummer: " + report.LaptopID)
-                    Text("Bericht: " + report.report)
-                    Text("Melder: " + report.reporter)
+                    VStack (alignment: .leading) {
+                        Text("Laptopnummer: \(report.LaptopID)")
+                        Text("Bericht: \(report.report)")
+                        Text("Melder: \(report.reporter)")
+                    }
                 }
             }
             .onAppear() {
@@ -122,6 +131,7 @@ struct adminView: View {
             
         }
     }
+
 
 
 struct adminView_Previews: PreviewProvider {

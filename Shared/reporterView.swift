@@ -92,6 +92,8 @@ struct reporterView: View {
                          Text("Speichern").frame(maxWidth: 400)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 10)
+                            .foregroundColor(.white)
+                            .font(.headline)
                         
                     }
             

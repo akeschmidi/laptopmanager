@@ -26,7 +26,7 @@ struct reservationView: View {
     @State var showToast: Bool = false
     
     private let toastOptions = SimpleToastOptions(
-        hideAfter: 1
+        hideAfter: 2
     )
     
     //Count how many laptops you need for this view
@@ -114,6 +114,8 @@ struct reservationView: View {
                          Text("Speichern").frame(maxWidth: 400)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 10)
+                            .foregroundColor(.white)
+                            .font(.headline)
                     }
                             .background(.teal)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
